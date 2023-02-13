@@ -24,7 +24,7 @@
       <div class="row mb-2">
         <div class="col-12">
           <div class="text-center">
-            <span class="form-control-label"><strong><i>Postharvest quality, safety, and nutritional attributes of organically grown vegetables</i></strong></label>
+            <input type="text" class="form-control-plaintext text-center border-0" name="seminarTitle" id="seminarTitle" value="Postharvest quality, safety, and nutritional attributes of organically grown vegetables" readonly>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
               </div> -->
             </div>
             <div class="col-md-3">
-              <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+              <label for="gender" class="form-label">Sex <span class="text-danger">*</span></label>
               <select class="form-select" id="gender" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Male">Male</option>
@@ -184,7 +184,7 @@
             </div>
             <div class="col-md-7">
               <label for="coopName" class="form-label">Name of the farmer or fisherfolk cooperative that you are in? <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="coopName" required>
+              <input type="text" class="form-control" id="coopName">
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -202,7 +202,7 @@
             </div>
             <div class="col-md-7">
               <label for="assocName" class="form-label">Name of the farmer or fisherfolk association that you are in? <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="assocName" required>
+              <input type="text" class="form-control" id="assocName">
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -220,7 +220,7 @@
             </div>
             <div class="col-md-7">
               <label for="RICName" class="form-label">Name of the RIC (Rural Improvement Club) that you are in? <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="RICName" required>
+              <input type="text" class="form-control" id="RICName">
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -253,6 +253,9 @@
 
 <script type="text/javascript">
   function submitThis(){
+    // Seminar Title
+    var title = document.getElementById("seminarTitle").value;
+
     // Basic Information
     var fName = document.getElementById("firstName").value;
     var mName = document.getElementById("middleName").value;
@@ -274,11 +277,12 @@
     var fRIC = document.getElementById("RIC").value;
     var rName = document.getElementById("RICName").value;
 
-    alert(fName + mName + lName + sex + ageGroup+email+loc+work+workplace+memberIP+pwde+fCoop+cpName+fAssoc+aName+fRIC+rName);
+    alert(title+fName + mName + lName + sex + ageGroup+email+loc+work+workplace+memberIP+pwde+fCoop+cpName+fAssoc+aName+fRIC+rName);
     $.ajax({
       url: 'process/register.php',
       type: 'post',
       data: {
+        stitle:title,
         sFName:fName,
         sMName:mName,
         sLName:lName,
