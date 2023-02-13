@@ -19,7 +19,8 @@ try {
 
 session_start();
 
-function saveUserInformation($mysqli, $title, $fname, $mname, $lname, $gender, $age, $emailAdd, $location, $occupation, $agency, $memberIP, $pwd, $coop, $coopName, $association, $assocName, $ric, $ricName)
+//function saveUserInformation($mysqli, $title, $fname, $mname, $lname, $gender, $age, $emailAdd, $location, $occupation, $agency, $memberIP, $pwd, $coop, $coopName, $association, $assocName, $ric, $ricName)
+function saveUserInformation($mysqli)
 {
   try {
     $sql = " INSERT INTO `user_information`(`title`, `fname`, `mname`, `lname`, `gender`, `age`, `emailAdd`, `location`, `occupation`, `agency`, `memberIP`, `pwd`, `platform`, `coop`, `coopName`, `association`, `assocName`, `ric`, `ricName`) 
@@ -28,25 +29,25 @@ function saveUserInformation($mysqli, $title, $fname, $mname, $lname, $gender, $
     $stmt = $mysqli->prepare($sql);
     $stmt->execute(
       array(
-        ':title' => $title,
-        ':fname' => $fname,
-        ':mname' => $mname,
-        ':lname' => $lname,
-        ':gender' => $gender,
-        ':age' => $age,
-        ':emailAdd' => $emailAdd,
-        ':loc' => $location,
-        ':occupation' => $occupation,
-        ':agency' => $agency,
-        ':memberIP' => $memberIP,
-        ':pwd' => $pwd,
-        ':platform' => 'Webex',
-        ':coop' => $coop,
-        ':coopName' => $coopName,
-        ':association' => $association,
-        ':assocName' => $assocName,
-        ':ric' => $ric,
-        ':ricName' => $ricName
+        ':title' => $_POST["seminarTitle"],
+        ':fname' => $_POST["firstName"],
+        ':mname' => $_POST["middleName"],
+        ':lname' => $_POST["lastName"],
+        ':gender' => $_POST["gender"],
+        ':age' => $_POST["age"],
+        ':emailAdd' => $_POST["emailAdd"],
+        ':loc' => $_POST["location"],
+        ':occupation' => $_POST["occupation"],
+        ':agency' => $_POST["agency"],
+        ':memberIP' => $_POST["ipSelect"],
+        ':pwd' => $_POST["pwd"],
+        ':platform' => "Webex",
+        ':coop' => $_POST["farmerCoop"],
+        ':coopName' => $_POST["coopName"],
+        ':association' => $_POST["farmerAssoc"],
+        ':assocName' => $_POST["assocName"],
+        ':ric' => $_POST["RIC"],
+        ':ricName' => $_POST["RICName"]
       )
     );
     return "success";
