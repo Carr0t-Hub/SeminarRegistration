@@ -1,5 +1,5 @@
 <?php include('common/header.php'); ?>
-
+<form action="process/register.php" method="POST" data-toggle="validator" role="form" enctype="multipart/form-data">
 <div class="container">
   <div class="card mt-2">
     <div class="card-header">
@@ -31,10 +31,10 @@
       <hr>
       <ul class="nav nav-tabs" id="infoTab">
         <li class="nav-item">
-            <a href="#home" class="nav-link active" data-bs-toggle="tab">Basic Information</a>
+          <a href="#home" class="nav-link active" data-bs-toggle="tab">Basic Information</a>
         </li>
         <li class="nav-item">
-            <a href="#farmer" class="nav-link" data-bs-toggle="tab">Others</a>
+          <a href="#farmer" class="nav-link" data-bs-toggle="tab">Others</a>
         </li>
       </ul>
       <div class="tab-content">
@@ -42,28 +42,28 @@
           <div class="row g-3 needs-validation mt-1" novalidate>
             <div class="col-md-4">
               <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="firstName" required>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
             </div>
             <div class="col-md-4">
               <label for="middleName" class="form-label">Middle Name <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="middleName" required>
+              <input type="text" class="form-control" id="middleName" name="middleName" required>
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
             </div>
             <div class="col-md-4">
               <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="lastName" required>
+              <input type="text" class="form-control" id="lastName" name="lastName" required>
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
             </div>
             <div class="col-md-3">
               <label for="gender" class="form-label">Sex <span class="text-danger">*</span></label>
-              <select class="form-select" id="gender" required>
+              <select class="form-select" id="gender" name="gender" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -74,7 +74,7 @@
             </div>
             <div class="col-md-4">
               <label for="age" class="form-label">Age <span class="text-danger">*</span></label>
-              <select class="form-select" id="age" required>
+              <select class="form-select" id="age" name="age" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="19 years old & below">19 years old & below</option>
                 <option value="20-29 years old">20-29 years old</option>
@@ -89,14 +89,14 @@
             </div>
             <div class="col-md-5">
               <label for="emailAdd" class="form-label">Email Address <span class="text-danger">*</span></label>
-              <input type="email" class="form-control" id="emailAdd" required>
+              <input type="email" class="form-control" id="emailAdd" name="emailAdd" required>
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
             </div>
             <div class="col-md-8">
               <label for="location" class="form-label">Location <span class="text-danger">*</span></label>
-              <select class="form-select" id="location" required>
+              <select class="form-select" id="location" name="location" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Ilocos Region">Ilocos Region</option>
                 <option value="Cagayan Valley">Cagayan Valley</option>
@@ -121,7 +121,7 @@
             </div>
             <div class="col-md-4">
               <label for="occupation" class="form-label">Occupation <span class="text-danger">*</span></label>
-              <select class="form-select" id="occupation" required>
+              <select class="form-select" id="occupation" name="occupation" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Farmer or Fisherfolk">Farmer or Fisherfolk</option>
                 <option value="Agripreneur">Agripreneur</option>
@@ -137,7 +137,7 @@
             </div>
             <div class="col-md-6">
               <label for="agency" class="form-label">Agency or Institution <span class="text-danger">*</span></label>
-              <select class="form-select" id="agency" required>
+              <select class="form-select" id="agency" name="agency" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="DA (RFO, AA and Staff Bureaus)">DA (RFO, AA and Staff Bureaus)</option>
                 <option value="Farmers or Fisherfolk Cooperatives or Associations">Farmers or Fisherfolk Cooperatives or Associations</option>
@@ -147,7 +147,7 @@
             </div>
             <div class="col-md-3">
               <label for="ipSelect" class="form-label">Member of Indigenous Peoples? <span class="text-danger">*</span></label>
-              <select class="form-select" id="ipSelect" required>
+              <select class="form-select" id="ipSelect" name="ipSelect" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -158,7 +158,7 @@
             </div>
             <div class="col-md-3 mb-3">
               <label for="pwd" class="form-label">Person with disability? <span class="text-danger">*</span></label>
-              <select class="form-select" id="pwd" required>
+              <select class="form-select" id="pwd" name="pwd" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -173,7 +173,7 @@
           <div class="row g-3 needs-validation mt-1" novalidate>
             <div class="col-md-5">
               <label for="farmerCoop" class="form-label">Member of a farmer or fisherfolk cooperative? <span class="text-danger">*</span></label>
-              <select class="form-select" id="farmerCoop" required>
+              <select class="form-select" id="farmerCoop" name="farmerCoop" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -184,14 +184,14 @@
             </div>
             <div class="col-md-7">
               <label for="coopName" class="form-label">Name of the farmer or fisherfolk cooperative that you are in? <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="coopName">
+              <input type="text" class="form-control" id="coopName" name="coopName">
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
             </div>
             <div class="col-md-5">
               <label for="farmerAssoc" class="form-label">Member of farmer or fisherfolk association? <span class="text-danger">*</span></label>
-              <select class="form-select" id="farmerAssoc" required>
+              <select class="form-select" id="farmerAssoc" name="farmerAssoc" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -202,14 +202,14 @@
             </div>
             <div class="col-md-7">
               <label for="assocName" class="form-label">Name of the farmer or fisherfolk association that you are in? <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="assocName">
+              <input type="text" class="form-control" id="assocName" name="assocName">
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
             </div>
             <div class="col-md-5">
               <label for="RIC" class="form-label">Member of RIC (Rural Improvement Club)? <span class="text-danger">*</span></label>
-              <select class="form-select" id="RIC" required>
+              <select class="form-select" id="RIC" name="RIC" required>
                 <option selected disabled value="">Choose...</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -220,7 +220,7 @@
             </div>
             <div class="col-md-7">
               <label for="RICName" class="form-label">Name of the RIC (Rural Improvement Club) that you are in? <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="RICName">
+              <input type="text" class="form-control" id="RICName" name="RICName">
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -243,73 +243,14 @@
           </div>
         </div> -->
         <div class="col-12">
-          <button class="btn btn-primary btn-md" onclick="submitThis()"><i class="fa-solid fa-check"></i> Submit</button>
+          <button class="btn btn-primary btn-md" name="SaveReg" id="SaveReg"><i class="fa-solid fa-check"></i> Submit</button>
         </div>
       </div>
     </div>
     <!-- </form> -->
   </div>
 </div>
+</form>
 
-<script type="text/javascript">
-  function submitThis(){
-    // Seminar Title
-    var title = document.getElementById("seminarTitle").value;
-
-    // Basic Information
-    var fName = document.getElementById("firstName").value;
-    var mName = document.getElementById("middleName").value;
-    var lName = document.getElementById("lastName").value;
-    var sex = document.getElementById("gender").value;
-    var ageGroup = document.getElementById("age").value;
-    var email = document.getElementById("emailAdd").value;
-    var loc = document.getElementById("location").value;
-    var work = document.getElementById("occupation").value;
-    var workplace = document.getElementById("agency").value;
-    var memberIP = document.getElementById("ipSelect").value;
-    var pwde = document.getElementById("pwd").value;
-    
-    // Other Information
-    var fCoop = document.getElementById("farmerCoop").value;
-    var cpName = document.getElementById("coopName").value;
-    var fAssoc = document.getElementById("farmerAssoc").value;
-    var aName = document.getElementById("assocName").value;
-    var fRIC = document.getElementById("RIC").value;
-    var rName = document.getElementById("RICName").value;
-
-    alert(title+fName + mName + lName + sex + ageGroup+email+loc+work+workplace+memberIP+pwde+fCoop+cpName+fAssoc+aName+fRIC+rName);
-    $.ajax({
-      url: 'process/register.php',
-      type: 'post',
-      data: {
-        stitle:title,
-        sFName:fName,
-        sMName:mName,
-        sLName:lName,
-        sSex:sex,
-        sAgeGroup:ageGroup,
-        sEmail:email,
-        sLoc:loc,
-        sWork:work,
-        sWorkplace:workplace,
-        sMemberIP:memberIP,
-        sPwde:pwde,
-        sFCoop:fCoop,
-        sCpName:cpName,
-        sFAssoc:fAssoc,
-        sAName:aName,
-        sFRIC:fRIC,
-        sRName:rName
-      },
-      dataType: "json",
-      success:function(response){
-        if(response == "submitted"){
-          alert("Information Saved!");
-          // history.go(0);
-        }
-      }
-    });
-  }
-</script>
 
 <?php include('common/footer.php'); ?>
