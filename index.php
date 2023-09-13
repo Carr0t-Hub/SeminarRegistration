@@ -1,8 +1,31 @@
 <?php include('common/header.php'); ?>
 
 <div class="container">
-  <div class="card mt-2">
-    <div class="card-header">
+
+<div id="container-floating">
+  <!-- <div class="nd4 nds"><img class="reminder">
+    <p class="letter"><a href="#" class="text-white"><i class="bi bi-door-open"></i></a></p>
+  </div> -->
+  
+  <div class="nd3 nds"><img class="reminder">
+    <p class="letter"><a href="https://www.facebook.com/DABAROfficial" class="text-white"><i class="bi bi-facebook"></i></a></p>
+  </div>
+  
+  <div class="nd1 nds">
+    <p class="letter"><a href="login.php" class="text-white"><i class="bi bi-door-open"></i></a></p>
+  </div>
+
+  <div id="floating-button">
+    <p class="plus">+</p>
+    <img class="edit" src="https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/1x/bt_compose2_1x.png">
+  </div>
+</div>
+
+
+
+
+  <div class="card border-dark mt-2">
+    <div class="card-header border-dark">
       <h2 class="card-title text-success">
         <center>
           <img src="assets/img/logo.png" class="img-fluid" height="100" width="100"><br>
@@ -13,14 +36,6 @@
     </div>
     <!-- <form action="process/register.php" method="POST" enctype="multipart/form-data"> -->
     <div class="card-body">
-      <div class="row mt-2">
-        <div class="col-md-12">
-          <div class="text-center">
-            <h3>DA-BAR Online Seminar Series Registration Form</h3>
-          </div>
-        </div>
-      </div>
-      <hr>
       <div class="row mb-2">
         <div class="col-12">
           <div class="text-center">
@@ -184,7 +199,11 @@
             </div>
             <div class="col-md-7">
               <label for="coopName" class="form-label">Name of the farmer or fisherfolk cooperative that you are in? <span class="text-danger">*</span></label>
+<<<<<<< Updated upstream
               <input type="text" class="form-control" id="coopName">
+=======
+              <input type="text" class="form-control" id="coopName" name="coopName" disabled>
+>>>>>>> Stashed changes
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -202,7 +221,11 @@
             </div>
             <div class="col-md-7">
               <label for="assocName" class="form-label">Name of the farmer or fisherfolk association that you are in? <span class="text-danger">*</span></label>
+<<<<<<< Updated upstream
               <input type="text" class="form-control" id="assocName">
+=======
+              <input type="text" class="form-control" id="assocName" name="assocName" disabled>
+>>>>>>> Stashed changes
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -220,7 +243,11 @@
             </div>
             <div class="col-md-7">
               <label for="RICName" class="form-label">Name of the RIC (Rural Improvement Club) that you are in? <span class="text-danger">*</span></label>
+<<<<<<< Updated upstream
               <input type="text" class="form-control" id="RICName">
+=======
+              <input type="text" class="form-control" id="RICName" name="RICName" disabled>
+>>>>>>> Stashed changes
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -229,7 +256,7 @@
         </div>
       </div>
     </div>
-    <div class="card-footer">
+    <div class="card-footer border-dark">
       <div class="row g-1">
         <!-- <div class="col-12">
           <div class="form-check">
@@ -243,7 +270,11 @@
           </div>
         </div> -->
         <div class="col-12">
+<<<<<<< Updated upstream
           <button class="btn btn-primary btn-md" onclick="submitThis()"><i class="fa-solid fa-check"></i> Submit</button>
+=======
+          <button class="form-control btn btn-primary btn-block btn-md" name="SaveReg" id="SaveReg"><i class="fa-solid fa-check"></i> Submit</button>
+>>>>>>> Stashed changes
         </div>
       </div>
     </div>
@@ -311,5 +342,7 @@
     });
   }
 </script>
+
+
 
 <?php include('common/footer.php'); ?>
