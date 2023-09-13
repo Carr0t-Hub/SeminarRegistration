@@ -199,11 +199,7 @@
             </div>
             <div class="col-md-7">
               <label for="coopName" class="form-label">Name of the farmer or fisherfolk cooperative that you are in? <span class="text-danger">*</span></label>
-<<<<<<< Updated upstream
               <input type="text" class="form-control" id="coopName">
-=======
-              <input type="text" class="form-control" id="coopName" name="coopName" disabled>
->>>>>>> Stashed changes
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -221,11 +217,7 @@
             </div>
             <div class="col-md-7">
               <label for="assocName" class="form-label">Name of the farmer or fisherfolk association that you are in? <span class="text-danger">*</span></label>
-<<<<<<< Updated upstream
               <input type="text" class="form-control" id="assocName">
-=======
-              <input type="text" class="form-control" id="assocName" name="assocName" disabled>
->>>>>>> Stashed changes
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -243,11 +235,7 @@
             </div>
             <div class="col-md-7">
               <label for="RICName" class="form-label">Name of the RIC (Rural Improvement Club) that you are in? <span class="text-danger">*</span></label>
-<<<<<<< Updated upstream
               <input type="text" class="form-control" id="RICName">
-=======
-              <input type="text" class="form-control" id="RICName" name="RICName" disabled>
->>>>>>> Stashed changes
               <!-- <div class="valid-feedback">
                 Looks good!
               </div> -->
@@ -270,11 +258,7 @@
           </div>
         </div> -->
         <div class="col-12">
-<<<<<<< Updated upstream
           <button class="btn btn-primary btn-md" onclick="submitThis()"><i class="fa-solid fa-check"></i> Submit</button>
-=======
-          <button class="form-control btn btn-primary btn-block btn-md" name="SaveReg" id="SaveReg"><i class="fa-solid fa-check"></i> Submit</button>
->>>>>>> Stashed changes
         </div>
       </div>
     </div>

@@ -19,9 +19,6 @@ try {
 
 session_start();
 
-<<<<<<< Updated upstream
-function saveUserInformation($mysqli, $title, $fname, $mname, $lname, $gender, $age, $emailAdd, $location, $occupation, $agency, $memberIP, $pwd, $coop, $coopName, $association, $assocName, $ric, $ricName)
-=======
 function userLogin($mysqli, $username, $password)
 {
   $stmt = $mysqli->prepare("SELECT * FROM users WHERE username = :w AND password = :x");
@@ -46,9 +43,7 @@ function userLogin($mysqli, $username, $password)
   }
 }
 
-//function saveUserInformation($mysqli, $title, $fname, $mname, $lname, $gender, $age, $emailAdd, $location, $occupation, $agency, $memberIP, $pwd, $coop, $coopName, $association, $assocName, $ric, $ricName)
-function saveUserInformation($mysqli)
->>>>>>> Stashed changes
+function saveUserInformation($mysqli, $title, $fname, $mname, $lname, $gender, $age, $emailAdd, $location, $occupation, $agency, $memberIP, $pwd, $coop, $coopName, $association, $assocName, $ric, $ricName)
 {
   try {
     $sql = " INSERT INTO `user_information`(`title`, `fname`, `mname`, `lname`, `gender`, `age`, `emailAdd`, `location`, `occupation`, `agency`, `memberIP`, `pwd`, `platform`, `coop`, `coopName`, `association`, `assocName`, `ric`, `ricName`) 
