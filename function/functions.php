@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 //notes
 
 try {
-  // $mysqli = new PDO('mysql:host=127.0.0.1;dbname=seminar_db', 'root', '');
-  $mysqli = new PDO('mysql:host=127.0.0.1;dbname=seminarseries', 'root', '');
+  $mysqli = new PDO('mysql:host=127.0.0.1;dbname=seminar_db', 'root', '');
+  // $mysqli = new PDO('mysql:host=127.0.0.1;dbname=seminarseries', 'root', '');
   // $mysqli = new PDO('mysql:host=10.0.0.231;dbname=pds_test', 'admin', 'datos@bar2021');
   // See the "errors" folder for details...
   $mysqli->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

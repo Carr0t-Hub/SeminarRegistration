@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2023 at 09:59 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Sep 20, 2023 at 08:08 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `seminarseries`
+-- Database: `seminar_db`
 --
 
 -- --------------------------------------------------------
@@ -32,7 +32,7 @@ CREATE TABLE `oss_agencies` (
   `agencies` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -55,7 +55,7 @@ CREATE TABLE `oss_register` (
   `pwd` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ CREATE TABLE `oss_register_other` (
   `RIC` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE `seminarlist` (
   `seminarDTF` datetime NOT NULL,
   `seminarDTT` datetime NOT NULL,
   `encodedBy` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `seminarlist`
@@ -94,6 +94,25 @@ INSERT INTO `seminarlist` (`seminarID`, `seminarTitle`, `seminarDTF`, `seminarDT
 (11, 'qqqqqqq', '2023-07-05 09:00:00', '2023-10-07 00:00:00', 156),
 (12, 'wre tetetetete', '2023-09-13 14:25:00', '2023-09-16 19:25:00', 156),
 (13, 'efw', '2023-09-12 14:29:00', '2023-09-28 14:29:00', 156);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -124,7 +143,7 @@ CREATE TABLE `user_information` (
   `ricName` varchar(255) NOT NULL,
   `dateTimeAdded` timestamp NOT NULL DEFAULT current_timestamp(),
   `seminarID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_information`
@@ -164,6 +183,12 @@ ALTER TABLE `seminarlist`
   ADD PRIMARY KEY (`seminarID`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user_information`
 --
 ALTER TABLE `user_information`
@@ -184,6 +209,12 @@ ALTER TABLE `oss_register`
 --
 ALTER TABLE `seminarlist`
   MODIFY `seminarID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user_information`
